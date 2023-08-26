@@ -2,18 +2,17 @@
 
 
 
-adalah sebuah platform pemungutan suara elektronik yang sedang dalam tahap pengembangan oleh tim Titian Ilmu dari SMAN 4 Muara Teweh. Aplikasi ini bertujuan untuk memfasilitasi proses pemilihan dalam lingkungan sekolah secara online.
-Di bawah ini adalah beberapa informasi awal mengenai persyaratan sistem dan tujuan pengembangan:
+adalah sebuah platform pemungutan suara elektronik yang sedang dalam tahap pengembangan oleh tim Titian Ilmu dari SMAN 4 Muara Teweh. Aplikasi ini bertujuan untuk memfasilitasi proses pemilihan dalam lingkungan sekolah secara
+paperless atau tanpa kertas,dengan menggunakan media evoting
 
-## Tujuan Pengembangan
+## Tujuan Pengembangan dan batasan
 
-
-- Kami berupaya memberikan pengalaman pemungutan suara yang aman, efisien, dan mudah digunakan bagi siswa dan guru.
+- Kami berupaya memberikan pengalaman pemungutan suara yang aman, efisien, dan mudah digunakan bagi siswa dan guru atau yang mengikuti pemilihan.
 
 ## Persyaratan Sistem (Wacana)
 
 - **Sistem Operasi:** Kami merekomendasikan menggunakan sistem operasi Windows atau Linux.
-- **Server Lokal:** Aplikasi "Moqbit" dijalankan pada server lokal menggunakan XAMPP. Anda dapat mengunduh XAMPP [di sini](https://www.apachefriends.org/download.html).
+- **Server Lokal:** Aplikasi ini adalah berbasis web dan dijalankan pada server lokal menggunakan XAMPP. Anda dapat mengunduh XAMPP [di sini](https://www.apachefriends.org/download.html).
 - **Spesifikasi Minimal Perangkat:** 
   - CPU: Dual Core
   - RAM: 4GB
