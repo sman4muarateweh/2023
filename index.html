@@ -1,24 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <!-- Membuat Dunia Kecil yang Ajaib -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Gaya yang Bercahaya Seperti Bintang -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Gaya yang Penuh Warna untuk Keajaiban -->
     <style>
-        /* Menyalakan Api Harapan */
         @font-face {
             font-family: 'CustomFont';
             src: url('font.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
-
-        /* Ruang untuk Mimpi dan Harapan */
         body {
             margin: 0;
             padding: 0;
@@ -31,16 +23,12 @@
             min-height: 100vh;
             overflow: hidden;
         }
-
-        /* Kotak yang Menyimpan Cahaya di Dalamnya */
         .popup-container {
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
         }
-
-        /* Kotak Kecil dengan Cerita Besar di Dalamnya */
         .popup-box {
             background-color: white;
             padding: 20px;
@@ -50,26 +38,22 @@
             opacity: 0;
             transform: scale(0.5);
             transition: opacity 0.5s, transform 0.5s;
-            text-align: center; /* Mengisi Dunia dengan Cerita */
+            text-align: center; /* Center the content */
         }
 
-        /* Tombol yang Penuh Semangat dan Harapan */
         .popup-box a.btn {
             display: block;
             margin-top: 20px;
         }
 
-        /* Animasi yang Menerangi Gelapnya Hati */
         .popup-box.zoom-out {
             animation: zoomOut 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
         }
 
-        /* Animasi yang Menyebarkan Harapan */
         .popup-box.reverse-animation {
             animation: reverseAnimation 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
         }
 
-        /* Keyframes yang Menyinari Kehidupan */
         @keyframes zoomOut {
             0% {
                 opacity: 0;
@@ -81,7 +65,6 @@
             }
         }
 
-        /* Keyframes yang Menandakan Mulainya Perubahan */
         @keyframes reverseAnimation {
             0% {
                 opacity: 1;
@@ -95,40 +78,29 @@
     </style>
 </head>
 <body>
-
-<!-- Membawa Cahaya dalam Kesendirian -->
 <div class="popup-container">
-    <!-- Kotak Harapan dengan Mimpi yang Besar di Dalamnya -->
     <div class="popup-box zoom-out" id="popup">
-        <img src="halo.png" alt="Mimpi dalam Gambar" style="max-width: 100%; height: auto;">
+        <img src="halo.png" alt="Halo Image" style="max-width: 100%; height: auto;">
         <h1 style="color: black; font-family: 'CustomFont', sans-serif;">Halo >_^</h1>
-        <h3 style="color: black; font-family: 'CustomFont', sans-serif;">Selamat datang di panggung pemilihan OSIS tahun 2023/2024</h3>
-        
-        <!-- Tombol yang Penuh Semangat untuk Berusaha Lebih Baik -->
+		<h3 style="color: black; font-family: 'CustomFont', sans-serif;">Selamat datang dipemeilihan OSIS tahun 2023/2024</h3>
+        <br>
+  
         <a href="javascript:void(0);" class="btn btn-primary" id="continueButton" style="font-family: 'CustomFont', sans-serif;">
-            <br><h2 style="color: white; font-family: 'CustomFont', sans-serif;">Klik di sini dan berharap dengan penuh semangat</h2><br>
-        </a>
+		<br><h2 style="color: white; font-family: 'CustomFont', sans-serif;">Klik disini untuk Lanjut</h2><br></a>
     </div>
 </div>
 
-<!-- Perubahan yang Akan Mewujudkan Harapan -->
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const body = document.querySelector("body");
         const popup = document.getElementById("popup");
         const continueButton = document.getElementById("continueButton");
-
-        // Menampilkan Harapan yang Bersinar dengan Ceria
         body.classList.add("show-popup");
-
-        // Menyemangati dengan tombol yang memiliki pesan dalam hatinya
         continueButton.addEventListener("click", function() {
             popup.classList.remove("zoom-out");
             popup.classList.add("reverse-animation");
-
-            // Mengantarkan ke pintu masa depan yang penuh dengan kemungkinan
             setTimeout(function() {
-                window.location.href = "vote/";
+                window.location.href = "vote/"; 
             }, 2000); 
         });
     });
@@ -136,5 +108,3 @@
 
 </body>
 </html>
-
-<!-- Kode ini menggambarkan perjalanan sebuah harapan yang lahir dari rasa kesendirian, dengan cinta oleh "perpustakaan" Titian Ilmu SMAN 4 Muara Teweh yang usianya 4 tahun -->
