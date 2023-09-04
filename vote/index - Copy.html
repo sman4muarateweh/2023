@@ -1,88 +1,68 @@
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Voting OSIS</title>
     <link rel="stylesheet" href="../data/cdn.jsdelivr.net_npm_bootstrap@5.3.0_dist_css_bootstrap.min.css">
     <style>
         .card {
             margin-bottom: 20px;
         }
-		/* styles.css */
-.header-image {
-    max-width: 100%;
-    height: auto;
-}
-
-.card {
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-
-.card.show-body .card-body {
-    opacity: 1;
-}
-
-@media (max-width: 768px) {
-    .col-md-6 {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-}
-
     </style>
 </head>
 
 <body>
-<div class="container mt-3">
-   
-    <h2 class="text-center mb-4">Pilihlah calon dengan mengklik salah satu gambar calon di bawah ini..</h2>
-	
-    <div class="row">
-        <div class="col-md-6 col-lg-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Calon 1</h5>
-                    <h4>Budi dan Budi</h4>
-                    <button class="btn btn-primary vote-btn" data-calon="1">
-                        <img src="c0.gif" class="card-img-top" alt="Calon 1">
-                        Pilih Calon Ini
-                    </button>
+
+    <div class="container mt-4">
+	<img src="../data/img/halo.png" alt="Halo Image" style="max-width: 100%; height: auto;">
+	<br><br>
+        <h3 class="text-center mb-4">Klik salah satu gambar calon dibawah untuk memilih..</h3>
+        <div class="row">
+            <div class="col-md-6 col-lg-3">
+                <div class="card">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Calon 1</h5>
+						<h4>korban disuruh</h4>
+                        <button class="btn btn-primary vote-btn" data-calon="1"><img src="c0.gif" class="card-img-top" alt="Calon 1">Pilih Calon Ini</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Calon 2</h5>
-                    <h4>Budi dan Budi</h4>
-                    <button class="btn btn-primary vote-btn" data-calon="2">
-                        <img src="c1.png" class="card-img-top" alt="Calon 2">
-                        Pilih Calon Ini
-                    </button>
+            <div class="col-md-6 col-lg-3">
+                <div class="card">
+      
+                    <div class="card-body">
+                        <h5 class="card-title">Calon 2</h5>
+						<h5>potensial</h5>
+                        <button class="btn btn-primary vote-btn" data-calon="2"><img src="c1.png" class="card-img-top" alt="Calon 2">Pilih Calon Ini</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Calon 3</h5>
-                    <h4>Budi dan Budi</h4>
-                    <button class="btn btn-primary vote-btn" data-calon="3">
-                        <img src="c2.png" class="card-img-top" alt="Calon 3">
-                        Pilih Calon Ini
-                    </button>
+            <div class="col-md-6 col-lg-3">
+                <div class="card">
+               
+                    <div class="card-body">
+                        <h5 class="card-title">Calon 3</h5>
+						<h5>iyain aja</h5>
+                        <button class="btn btn-primary vote-btn" data-calon="3"><img src="c2.png" class="card-img-top" alt="Calon 3">Pilih Calon Ini</button>
+                    </div>
+                </div>
+            </div>
+		
+            <div class="col-md-6 col-lg-3">
+                <div class="card">
+           
+                    <div class="card-body">
+                        <h5 class="card-title">Calon 4</h5>
+						<h5>fokus siapin masa depan</h5>
+                        <button class="btn btn-primary vote-btn" data-calon="4"><img src="c3.png" class="card-img-top" alt="Calon 4">GOLPUT</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-
-
 
     <!-- Modal Konfirmasi -->
     <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
@@ -174,9 +154,8 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h2 class="modal-title">Terima Kasih!</h2>
-				
+				<img src="3.gif" alt="Halo Image" style="max-width: 400px; height: 300px;">
             </div>
-			<img src="3.gif" alt="Halo Image" style="max-width: 400px; height: 300px;">
             <div class="modal-body">
                 <h3>Terima kasih telah berpatisipasi..<br>sekarang kamu bisa menjauh dari bilik pemilihan ini..</h3>
             </div>
