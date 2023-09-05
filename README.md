@@ -1,4 +1,9 @@
-[![tampilan aplikasi_0](demo/img.jpg)](demo/gui_0.mp4) <br>
+ <video width="640" height="360" controls><br>
+        <!-- Specify the video source(s) using <source> elements -->
+        <source src="demo/gui_0.mp" type="video/mp4">
+    </video>
+
+
 
 untuk melihat demo klik link dibawah ini:
 tampilan pemilihan : <br>
