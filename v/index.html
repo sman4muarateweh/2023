@@ -1,0 +1,375 @@
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../data/cdn.jsdelivr.net_npm_bootstrap@5.3.0_dist_css_bootstrap.min.css">
+
+
+    <style>
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('../data/font.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .popup-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .popup-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            max-width: 80%;
+            opacity: 0;
+            transform: scale(0.5);
+            transition: opacity 0.5s, transform 0.5s;
+            text-align: center; /* Center the content */
+        }
+
+        .popup-box a.btn {
+            display: block;
+            margin-top: 20px;
+        }
+
+        .popup-box.zoom-out {
+            animation: zoomOut 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+        }
+
+        .popup-box.reverse-animation {
+            animation: reverseAnimation 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+        }
+
+        @keyframes zoomOut {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes reverseAnimation {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+        }
+    </style>
+</head>
+<body style="color: black; font-family: 'CustomFont', sans-serif;">
+
+<div class="popup-container">
+    <div class="popup-box zoom-out" id="popup">
+
+      <div class="container mt-3">
+
+
+      	  <img src="../data/img/logo.png" alt="Halo Image" style="max-width: 100%; height: auto;">
+          <div class="row">
+              <div class="col-md-6 col-lg-4">
+                  <div class="card">
+                      <div class="card-body">
+                          <h5 class="card-title">paslon 1</h5>
+                          <p>Samuel Mudya<br>Dendra Refra Pramesti</p>
+                          <button class="btn btn-primary vote-btn" data-calon="1">
+                              <img src="../data/img/c0.gif" class="card-img-top" alt="Calon 1">
+                            klik disini untuk memilih paslon ini
+                          </button>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                  <div class="card">
+                      <div class="card-body">
+                          <h5 class="card-title">paslon 2</h5>
+                          <p>Muhammad Beny<br>Mochamad Fateh Alif </p>
+                          <button class="btn btn-primary vote-btn" data-calon="2">
+                              <img src="../data/img/c1.png" class="card-img-top" alt="Calon 2">
+                              klik disini untuk memilih paslon ini
+                          </button>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                  <div class="card">
+                      <div class="card-body">
+                          <h5 class="card-title">paslon 3</h5>
+                          <p>Nia Ramadhani<br>Christian Nouvendri Situmorang</p>
+                          <button class="btn btn-primary vote-btn" data-calon="3">
+                              <img src="../data/img/c2.png" class="card-img-top" alt="Calon 3">
+                            klik disini untuk memilih paslon ini
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+
+    </div>
+
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const body = document.querySelector("body");
+        const popup = document.getElementById("popup");
+        const continueButton = document.getElementById("continueButton");
+        body.classList.add("show-popup");
+        continueButton.addEventListener("click", function() {
+            popup.classList.remove("zoom-out");
+            popup.classList.add("reverse-animation");
+            setTimeout(function() {
+                window.location.href = "v/";
+            }, 2000);
+        });
+    });
+</script>
+
+</body>
+</html>
+
+
+
+
+    <style>
+        .card {
+            margin-bottom: 20px;
+        }
+		/* styles.css */
+.header-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+.card.show-body .card-body {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+
+
+
+
+    <!-- Modal Konfirmasi -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5  style="color: black; font-family: 'CustomFont', sans-serif;" class="modal-title">Apa kamu yakin?</h5>
+					<img src="../data/img/1.gif" alt="Halo Image" style="max-width: 150px; height: 150px;">
+
+                </div>
+                <div class="modal-body">
+                    <p   style="color: black; font-family: 'CustomFont', sans-serif;" >Pilihanmu akan mementukan suatu nasib ^_^ </p>
+                </div>
+				   <div class="modal-footer">
+                <button class="btn btn-primary d-flex justify-content-center align-items-center" class="btn btn-primary" id="confirmVote" style="width: 100%; height: 100px;">
+                    <h2  font-family: 'CustomFont'>Ya</h2>
+                </button>
+
+				<button class="btn btn-secondary" style="width: 100%; height: 100px;" data-bs-dismiss="modal"><h3>Tidak</h3></button>
+            </div>
+
+
+
+				<br>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- Loading Modal -->
+<div class="modal fade" id="loadingModal" tabindex="-1" aria-labelledby="loadingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen"> <!-- Use modal-fullscreen class to make it occupy the entire screen -->
+        <div class="modal-content">
+            <div class="modal-body text-center">
+			<br>
+			<br>
+			<br>
+                <img src="../data/img/load.gif" alt="Loading Animation" style="max-width: 100%; height: auto;" class="rounded-circle">
+                <h5>sebentar..</h5>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Add this style to your existing styles -->
+<style>
+    /* Other styles... */
+
+    .fade .modal-dialog.modal-fullscreen {
+        transform: scale(0.1); /* Initial scale for zooming effect */
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .fade.show .modal-dialog.modal-fullscreen {
+        transform: scale(1); /* Scale to 100% for zooming effect */
+    }
+</style>
+
+    <!-- Modal Error -->
+<div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="errorModalLabel">Terjadi Galat</h5>
+				<img src="../data/img/2.gif" alt="Halo Image" style="max-width: 200px; height: 150px;">
+
+            </div>
+            <div class="modal-body">
+
+                <h4 style="color: black; font-family: 'CustomFont', sans-serif;" >Terjadi galat, mohon coba lagi :( </h4>
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary d-flex justify-content-center align-items-center" data-bs-dismiss="modal" style="width: 100%; height: 100px;">
+                    <h1>OK</h1>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Thank You Modal -->
+<div style="color: black; font-family: 'CustomFont', sans-serif;" class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Terima Kasih!</h2>
+
+            </div>
+			<img src="../data/img/3.gif" alt="Halo Image" style="max-width: 400px; height: 300px;">
+            <div class="modal-body">
+                <h3>Terima kasih telah berpatisipasi..<br>sekarang kamu bisa menjauh dari bilik pemilihan ini..</h3>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../data/cdn.jsdelivr.net_npm_bootstrap@5.3.0_dist_js_bootstrap.bundle.min.js"></script>
+    <script src="../data/code.jquery.com_jquery-3.6.0.min.js"></script>
+
+
+
+
+<script>
+    $(document).ready(function() {
+        var selectedCalon;
+
+        $(".vote-btn").click(function() {
+            selectedCalon = $(this).data("calon");
+            $("#confirmationModal").modal("show");
+        });
+
+        $("#confirmVote").click(function() {
+            $("#loading-overlay").addClass("loading"); // Add class to enable overlay and disable interactions
+            $("#confirmationModal").modal("hide");
+            $("#loadingModal").modal("show"); // Show the loading modal before the AJAX request
+
+            $.ajax({
+                type: "POST",
+                url: "v.php",
+                data: { calonID: selectedCalon },
+                success: function(response) {
+                    $("#loadingModal").modal("hide");
+                    if (response === "success") {
+                        $("#thankYouModal").modal("show");
+                        setTimeout(function() {
+                            window.location.href = "../";
+                        }, 5000);
+                    } else {
+                        $("#errorModal").modal("show");
+                    }
+                },
+                error: function() {
+                    $("#loadingModal").modal("hide");
+                    $("#errorModal").modal("show");
+                },
+                complete: function() {
+                    $("#loading-overlay").removeClass("loading");
+                }
+            });
+        });
+    });
+</script>
+<style>
+    /* Other styles... */
+
+    #loading-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+        z-index: 1000; /* Place above other elements */
+        display: none;
+        pointer-events: none; /* Allow interactions when hidden */
+    }
+
+    .loading {
+        pointer-events: auto; /* Enable interactions when shown */
+    }
+</style>
+
+</body>
+
+</html>
