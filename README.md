@@ -1,3 +1,5 @@
+[![tampilan aplikasi_0](demo/img.jpg)](demo/gui_0.mp4) <br>
+
 untuk melihat demo klik link dibawah ini:
 tampilan pemilihan : <br>
 https://sman4muarateweh.github.io/2023
