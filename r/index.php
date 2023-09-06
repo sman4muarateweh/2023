@@ -49,7 +49,7 @@
                             <!-- Candidate 1 -->
                             <div class="col-md-4">
                                 <div class="card">
-                                    <img src="../data/img/c0.gif" class="card-img-top" alt="Calon 3">
+                                    <img src="../data/img/c1.png" class="card-img-top" alt="Calon 3">
                                     <div class="card-body">
                                         <p>Samuel Mudya<br>Dendra Refra Pramesti</p>
                                     </div>
@@ -58,7 +58,7 @@
                             <!-- Candidate 2 -->
                             <div class="col-md-4">
                                 <div class="card">
-                                    <img src="../data/img/c1.png" class="card-img-top" alt="Calon 3">
+                                    <img src="../data/img/c2.png" class="card-img-top" alt="Calon 3">
                                     <div class="card-body">
                                   <p>Muhammad Beny<br>Mochamad Fateh Alif </p>
                                     </div>
@@ -67,7 +67,7 @@
                             <!-- Candidate 3 -->
                             <div class="col-md-4">
                                 <div class="card">
-                                    <img src="../data/img/c2.png" class="card-img-top" alt="Calon 3">
+                                    <img src="../data/img/c3.png" class="card-img-top" alt="Calon 3">
                                     <div class="card-body">
                                       <p>Nia Ramadhani<br>Christian Nouvendri Situmorang</p>
                                     </div>
@@ -101,12 +101,12 @@
                             $total_suara = $row["total_suara"];
                         }
 
-                        // Close the database connection
-                        $conn->close();
 
-                        // Display the modified HTML
-                        echo '<h3>Total Pemilih: ' . $total_suara . '/741</h3>';
-                        echo '<p>Permilihan Kemtos 2023/2024</p>';
+                        $conn->close();
+                        $maxValue = 100;
+                        $percentage = ($total_suara / $maxValue) * 100;
+
+                        echo '<h3>Perolehan suara: ' . $total_suara . '/' . $maxValue . ' (' . round($percentage, 2) . '%)</h3>';
                         ?>
                     </div>
                 </div>
@@ -145,11 +145,8 @@
                                         die("Connection failed: " . $conn->connect_error);
                                     }
 
-                                    // SQL query to fetch data
                                     $sql = "SELECT nama_calon, jumlah_suara FROM calon_osis";
                                     $result = $conn->query($sql);
-
-                                    // Fetch data and format it as an array
                                     $dataPoints = array();
                                     if ($result->num_rows > 0) {
                                         while ($row = $result->fetch_assoc()) {
@@ -160,7 +157,6 @@
                                         }
                                     }
 
-                                    // Close the database connection
                                     $conn->close();
 
                                     // Encode the data as JSON
