@@ -11,7 +11,7 @@ untuk melihat demo klik link dibawah ini:
 tampilan pemilihan : <br>
 https://sman4muarateweh.github.io/evoting/v
 
-untuk melihat hasil quick count :
+untuk melihat hasil quick count : <br>
 https://sman4muarateweh.github.io/evoting/x
 
 
