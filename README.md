@@ -6,14 +6,4 @@ ini adalah sebuah platform pemungutan suara elektronik yang sedang dalam tahap p
     </video>
 
 
-
-untuk melihat demo klik link dibawah ini:
-tampilan pemilihan : <br>
-https://sman4muarateweh.github.io/evoting/v
-
-untuk melihat hasil quick count : <br>
-https://sman4muarateweh.github.io/evoting/x
-
-
-
-aplikasi adalah 99,9% offline atau digunakan hanya dalam jaringan localhost atau tanpa jaringan internet
+aplikasi adalah 100% tidak terhubung dengan internet atau digunakan hanya dalam jaringan localhost.
