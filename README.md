@@ -9,7 +9,10 @@ ini adalah sebuah platform pemungutan suara elektronik yang sedang dalam tahap p
 
 untuk melihat demo klik link dibawah ini:
 tampilan pemilihan : <br>
-https://sman4muarateweh.github.io/2023
+https://sman4muarateweh.github.io/evoting/v
+
+untuk melihat hasil quick count :
+https://sman4muarateweh.github.io/evoting/x
 
 
 
