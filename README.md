@@ -7,3 +7,4 @@ ini adalah sebuah platform pemungutan suara elektronik yang sedang dalam tahap p
 
 
 aplikasi adalah 100% tidak terhubung dengan internet atau digunakan hanya dalam jaringan localhost.
+atau dapat digunakan dan terhubung dengan internet, tanpa internet didesain jika ingin digunakan pada lingkungan yang sulit internet.
