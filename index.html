@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        .container {
+            width: 74%;
+            background: white;
+            padding: 20px;
+            border-radius: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            text-align: center;
+            transition: transform 0.5s, opacity 0.5s;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+        img {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+        a {
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+            border: 2px solid #66ccff;
+            border-radius: 40px;
+            padding: 12px 5px;
+            color: white;
+            text-decoration: none;
+            background-color: #66ccff;
+            transform: translateY(30px);
+            opacity: 0;
+            animation: slideFade 0.5s forwards;
+            animation-delay: 0.5s;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        a:hover {
+            background-color: #57b3e5;
+            transform: translateY(25px);
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideFade {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            p {
+                font-size: 0.9em;
+            }
+        }
+        #loadingContainer {
+            display: none;
+            background-color: black;
+            color: white;
+            padding: 20px;
+            border-radius: 0;
+            text-align: center;
+            transition: opacity 0.5s;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+        }
+        .spinner {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #66ccff;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 10px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .fade-out {
+            opacity: 0;
+            transition: opacity 1s ease, transform 0.5s ease; 
+            transform: translateY(30px); 
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <img src="logo.jpg" alt="Logo OSIS SMA Negeri 4 Muara Teweh">
+        <h1>Selamat Datang</h1>
+        <p>Di pemilihan ketua dan wakil ketua OSIS SMA Negeri 4 Muara Teweh tahun 2024 / 2025.</p>
+        <a href="#" id="startBtn">Sentuh disini<br>untuk mulai memilih</a>
+    </div>
+
+    <div class="container" id="loadingContainer">
+        <div class="spinner"></div>
+        <img src="aris.gif" alt="Loading" style="width: 100px; height: 100px;" />
+        <p>Tunggu sebentar, sedang menghubungkan...</p>
+        <p style="font-weight: bold;">Tahukah kamu? <br>Jika<br> pilihanmu menentukan masa depan sekolah?</p>
+    </div>
+
+    <script>
+        document.getElementById('startBtn').addEventListener('click', function(event) {
+            event.preventDefault();
+            const container = document.getElementById('container');
+            const loadingContainer = document.getElementById('loadingContainer');
+
+            container.classList.add('fade-out');
+
+            setTimeout(() => {
+                container.style.display = 'none'; 
+                loadingContainer.style.display = 'block';
+                loadingContainer.style.opacity = '0';
+                setTimeout(() => {
+                    loadingContainer.style.opacity = '1';
+                }, 50);
+            }, 500);
+
+            setTimeout(function() {
+                loadingContainer.querySelector('p').classList.add('fade-out');
+                loadingContainer.querySelector('.spinner').classList.add('fade-out');
+                loadingContainer.querySelector('img').classList.add('fade-out');
+
+                setTimeout(function() {
+                    window.location.href = 'p/';
+                }, 1000);
+            }, 2444);
+        });
+    </script>
+</body>
+</html>
